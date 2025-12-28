@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Otomasyon Projesi Suite">
+
+    <test name="Regresyon Testleri">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="com.otomasyon.tests.Login"/>
+        </classes>
+    </test>
+
+</suite>
