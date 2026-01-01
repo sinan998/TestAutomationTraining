@@ -3,13 +3,14 @@
 <!--
 <suite name="Paralel Test Suite" parallel="methods" thread-count="2">
 -->
-<suite name="Sıralı Test Suite">
+<suite name="Sıralı Test Suite" parallel="methods" thread-count="10">
 
     <test name="Hızlı Testler">
         <parameter name="browser" value="chrome"/>
-
         <classes>
-            <class name="com.automation.tests.ParalelTest"/>
+            <class name="com.automation.tests.LoginTests"/>
+            <class name="com.automation.tests.ProductsTests"/>
+            <class name="com.automation.tests.ProductDetailsTests"/>
         </classes>
     </test>
 
