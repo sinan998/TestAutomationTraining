@@ -5,6 +5,9 @@
 -->
 <suite name="Sıralı Test Suite">
 
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
     <test name="Hızlı Testler">
         <parameter name="browser" value="chrome"/>
         <classes>
