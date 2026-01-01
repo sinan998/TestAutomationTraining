@@ -1,6 +1,8 @@
 package com.automation.utilities;
 
 import com.utilities.ConfigManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +16,7 @@ import java.util.Map;
 public class DriverFactory {
 
 
-
+    private static final Logger logger = LogManager.getLogger(DriverFactory.class);
     private static ThreadLocal<WebDriver> driverPool= new ThreadLocal<>();
 
 
@@ -28,6 +30,7 @@ public class DriverFactory {
 
         switch (browser){
             case "chrome":
+                logger.info("Chrome driver başlatılıyor...");
                 ChromeOptions options = new ChromeOptions();
 
                 // 1. Temel Argumentler
@@ -57,9 +60,11 @@ public class DriverFactory {
                 driverPool.set(new ChromeDriver(options));
                 break;
             case "firefox":
+                logger.info("Firefox driver başlatılıyor...");
                 driverPool.set(new FirefoxDriver());
                 break;
             case "safari":
+                logger.info("Safari driver başlatılıyor...");
                 driverPool.set(new SafariDriver());
                 break;
 

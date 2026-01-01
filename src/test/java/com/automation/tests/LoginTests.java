@@ -11,7 +11,6 @@ public class LoginTests extends BaseTest {
 
     @Test(description = "Geçersiz kullanıcı ile giriş denemesi")
     public void invalidLoginTest(){
-
         LoginPage loginPage= new LoginPage(DriverFactory.getDriver());
         DriverFactory.getDriver().get(ConfigManager.getProperty("url"));
         loginPage.loginToWebsite(ConfigManager.getProperty("username"),ConfigManager.getProperty("wrongPassword"));
