@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+<suite name="Paralel Test Suite" parallel="methods" thread-count="2">
+-->
+<suite name="Sıralı Test Suite">
+
+    <test name="Hızlı Testler">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="com.automation.tests.ParalelTest"/>
+        </classes>
+    </test>
+
+</suite>
