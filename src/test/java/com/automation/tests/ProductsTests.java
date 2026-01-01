@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class ProductsTests extends BaseTest {
 
-    @Test(description = "Ürün Sepete eklenir")
+    @Test(priority = 3, description = "Ürün Sepete eklenir")
     public void addToCartItem(){
 
         LoginPage loginPage= new LoginPage(DriverFactory.getDriver());

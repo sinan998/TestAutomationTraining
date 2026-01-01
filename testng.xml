@@ -3,7 +3,7 @@
 <!--
 <suite name="Paralel Test Suite" parallel="methods" thread-count="2">
 -->
-<suite name="Sıralı Test Suite" parallel="methods" thread-count="10">
+<suite name="Sıralı Test Suite">
 
     <test name="Hızlı Testler">
         <parameter name="browser" value="chrome"/>

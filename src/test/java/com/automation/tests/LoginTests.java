@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-    @Test(description = "Geçersiz kullanıcı ile giriş denemesi")
+    @Test(priority = 1, description = "Geçersiz kullanıcı ile giriş denemesi")
     public void invalidLoginTest(){
         LoginPage loginPage= new LoginPage(DriverFactory.getDriver());
         DriverFactory.getDriver().get(ConfigManager.getProperty("url"));
@@ -23,7 +23,7 @@ public class LoginTests extends BaseTest {
     }
 
 
-    @Test(description = "Başarılı giriş işlemi")
+    @Test(priority = 2, description = "Başarılı giriş işlemi")
     public void validLoginTest(){
         LoginPage loginPage= new LoginPage(DriverFactory.getDriver());
         DriverFactory.getDriver().get(ConfigManager.getProperty("url"));
